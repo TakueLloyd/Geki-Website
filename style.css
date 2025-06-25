@@ -1,0 +1,220 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Header */
+header {
+  background-color: #0066cc; /* Blue */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 5px solid #ff6600; /* Orange */
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.slogan {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #cde9ff;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc66;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #e8f5e9; /* Light green tint */
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #2e7d32; /* Green */
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #2e7d32; /* Green */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Highlight Section */
+.highlight {
+  background-color: #fff3e0; /* Light orange tint */
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.highlight h3 {
+  font-size: 1.8rem;
+  color: #e65100; /* Orange */
+  margin-bottom: 10px;
+}
+
+.highlight p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.partner {
+  background-color: #ff6600;
+}
+
+.partner:hover {
+  background-color: #cc5200;
+}
+
+/* Footer */
+footer {
+  background-color: #0066cc;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  border-top: 4px solid #2e7d32;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero, .highlight {
+    padding: 25px 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+/* ==== LOGO STYLING ==== */
+.logo {
+  height: 50px;
+}
+.logo-large {
+  height: 130px;
+  margin-top: 20px;
+}
+
+/* ==== HOMEPAGE TOP IMAGE ==== */
+.hero-banner {
+  background-image: url("images/darwin.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.hero-banner .logo-large {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* ==== MINERS IMAGE ==== */
+.miner-image {
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* ==== BUSINESS PARK IMAGE ==== */
+.park-image {
+  width: 100%;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+.logo-left {
+  height: 80px;
+  margin-left: 20px;
+}
+.slogan {
+  font-style: italic;
+  font-weight: bold;
+  color: #008000;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.animated-slogan {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
