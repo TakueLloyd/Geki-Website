@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEKI - Growing our Growth</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }header {
+  position: relative;
+}
+
+.banner {
+  background: url('images/darwin.jpg') no-repeat center center/cover;
+  height: 350px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  height: 120px;
+  z-index: 2;
+}
+
+nav {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.info-section {
+  background: linear-gradient(135deg, #e6ffed, #fff3e0);
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 128, 0, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.info-section::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 165, 0, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.info-card {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 600px;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.info-card h3 {
+  color: #004080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.info-card h3::before {
+  content: attr(data-icon);
+  font-size: 24px;
+}
+
+.gallery-section {
+  padding: 40px 20px;
+  background: #f5faff;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+.slider {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slides img {
+  width: 100%;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="banner"></div>
+    <img src="images/logo.png" alt="GEKI Logo" class="logo">
+  </header>  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="expo.html">🎪 Exhibit / Sponsor</a>
+  </nav>  <section class="info-section">
+    <a href="about.html" style="text-decoration: none; color: inherit;">
+      <div class="info-card" data-icon="📘">
+        <h3>About GEKI</h3>
+      <p>GEKI is a youth-led community association founded in February 2024, aimed at growing economic knowledge and innovation in Mt Darwin.</p>
+    </div>
+    </a>
+    <a href="expo.html" style="text-decoration: none; color: inherit;">
+      <div class="info-card" data-icon="📈">
+        <h3>Business EXPO</h3>
+      <p>We host the Mt Darwin Business EXPO to promote local businesses, attract investment, and build community-driven progress.</p>
+    </div>
+    </a>
+    <a href="contact.html" style="text-decoration: none; color: inherit;">
+      <div class="info-card" data-icon="📞">
+        <h3>Contact</h3>
+      <p>For inquiries: +263715931309 or +263785498396<br>Email: mtdarwinexpo@gmail.com</p>
+    </div>
+    </a><!-- Video Card -->
+<div class="info-card" style="padding: 0; overflow: hidden;">
+  <video autoplay muted loop style="width: 100%; height: 100%; border-radius: 12px;">
+    <source src="videos/expo1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+  </section>  <section class="gallery-section">
+    <h2>📸 Mount Darwin News</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="images/news/news1.jpg" alt="Mt Darwin Event 1">
+        <img src="images/news/news2.jpg" alt="Mt Darwin Event 2">
+        <img src="images/news/news3.jpg" alt="Mt Darwin Event 3">
+      </div>
+    </div>
+  </section>  <footer>
+    <p>&copy; 2025 GEKI. All rights reserved.</p>
+  </footer>
+</body>
+</html>
