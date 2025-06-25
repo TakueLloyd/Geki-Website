@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact GEKI</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }.logo {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  height: 100px;
+}
+
+nav {
+  text-align: center;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #004080;
+  font-size: 2em;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #008000;
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+.info-box {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box p {
+  font-size: 16px;
+  color: #333;
+  margin: 15px 0;
+  line-height: 1.8;
+}
+
+.slogan {
+  font-style: italic;
+  font-weight: bold;
+  color: #008000;
+  font-size: 18px;
+  margin-top: 40px;
+  text-align: center;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes glow {
+  0% { color: #008000; text-shadow: none; }
+  50% { color: #00b300; text-shadow: 0 0 10px #7fff00; }
+  100% { color: #008000; text-shadow: none; }
+}
+
+  </style>
+</head>
+<body>
+  <img src="images/logo.png" alt="GEKI Logo" class="logo" />  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="expo.html">🎪 Exhibit / Sponsor</a>
+  </nav>  <div class="content">
+    <h1>Contact <span class="highlight">GEKI</span></h1>
+    <div class="info-box">
+      <p><span class="highlight">Email:</span><br>mtdarwinexpo@gmail.com</p>
+      <p><span class="highlight">Phone:</span><br>+263715931309 / +263785498396</p>
+      <p><span class="highlight">Address:</span><br>350 New Pfura Location, Mt Darwin</p>
+      <p>For any inquiries, suggestions, or partnerships — we are always happy to connect!</p>
+    </div><div class="info-box">
+  <h2 style="color:#004080;">Send Us a Quick Message</h2>
+  <form action="https://formspree.io/f/mgejzavk" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+    <input type="text" name="name" placeholder="Your Name" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+    <input type="email" name="email" placeholder="Your Email" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+    <textarea name="message" placeholder="Your Message" rows="4" required style="padding:10px; border-radius:8px; border:1px solid #ccc;"></textarea>
+    <button type="submit" style="padding:12px; background-color:#008000; color:#fff; font-weight:bold; border:none; border-radius:8px; cursor:pointer;">Send Message</button>
+  </form>
+  </form>
+    <!-- ✅ Success/Failure message placeholder -->
+    <div id="form-message" style="display:none; margin-top:15px; font-weight:bold;"></div>
+  </div>
+
+  <!-- ✅ Animated slogan -->
+  <div class="slogan">“Growing our Growth”</div>
+</div>
+
+<!-- ✅ JavaScript for form feedback -->
+<script>
+  const form = document.querySelector("form");
+  const messageDiv = document.getElementById("form-message");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      if (res.ok) {
+        messageDiv.style.display = "block";
+        messageDiv.style.color = "#008000";
+        messageDiv.textContent = "✅ Thank you! Your message has been sent.";
+        form.reset();
+      } else {
+        throw new Error();
+      }
+    } catch (err) {
+      messageDiv.style.display = "block";
+      messageDiv.style.color = "#cc0000";
+      messageDiv.textContent = "⚠️ Something went wrong. Please try again.";
+    }
+  });
+</script>
+
+</body>
+</html>
